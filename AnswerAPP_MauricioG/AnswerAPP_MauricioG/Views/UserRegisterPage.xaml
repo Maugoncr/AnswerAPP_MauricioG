@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerAPP_MauricioG.Views.UserRegisterPage"
+             BackgroundImageSource="registerbg.jpg"
+             >
+               
+    
+    
+    <ContentPage.Content>
+
+
+
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+
+            <FlexLayout Padding="105,-30,105,-20">
+
+                <Image Source="usericon.png" VerticalOptions="Center" IsVisible="true" HeightRequest="170" WidthRequest="170"/>
+
+            </FlexLayout>
+            <Entry x:Name="TxtUserName" HorizontalTextAlignment="Start" Placeholder="Email/UserName" TextTransform="Lowercase" PlaceholderColor="White" FontSize="Large" TextColor="White" Keyboard="Email"/>
+            <Entry x:Name="TxtFirstName" HorizontalTextAlignment="Start" Placeholder="FirstName"  FontSize="Large" PlaceholderColor="White" TextColor="White"/>
+            <Entry x:Name="TxtLastName" HorizontalTextAlignment="Start" Placeholder="LastName" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtPhoneNumber" HorizontalTextAlignment="Start" Placeholder="Phone" Keyboard="Telephone"  PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+
+            <FlexLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="20">
+
+                    <Entry x:Name="TxtPassword" WidthRequest="310" HorizontalTextAlignment="Start" Placeholder="Password" PlaceholderColor="White" IsPassword="True" FontSize="Large" TextColor="White"/>
+                    <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
+
+                </StackLayout>
+                
+                
+            </FlexLayout>
+            
+            <Entry x:Name="TxtBackUpEmail" HorizontalTextAlignment="Start" Placeholder="BackUpEmail" PlaceholderColor="White" TextTransform="Lowercase" FontSize="Large" TextColor="White" Keyboard="Email"/>
+            <Entry x:Name="TxtJobDescription" HorizontalTextAlignment="Start" Placeholder="JobDescription" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+
+            
+
+            <FlexLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="0,10,0,0" Spacing="20" HorizontalOptions="End">
+                
+                <Button Text="Add" BackgroundColor="#16F516" 
+                    WidthRequest="175" Padding="10,0,10,0" FontAttributes="Bold" FontSize="Medium"/>
+                    <Button Text="Cancel" BackgroundColor="#EB1F62" 
+                     WidthRequest="175" Padding="10,0,10,0"
+                        Clicked="CmdVolver" FontAttributes="Bold" FontSize="Medium"/>
+
+                </StackLayout>
+
+            </FlexLayout>
+            
+            
+
+        </StackLayout>
+        
+        
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

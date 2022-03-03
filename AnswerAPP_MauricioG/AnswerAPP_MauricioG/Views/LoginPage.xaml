@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnswerAPP_MauricioG.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="appbg.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="50,0,50,0" VerticalOptions="Center"> 
+            
+
+            <Entry x:Name="TxtUserName" Placeholder="Email" TextTransform="Lowercase" FontSize="Large" TextColor="White" Keyboard="Email" PlaceholderColor="White"/>
+            
+            <StackLayout Orientation="Horizontal" Spacing="5" Padding="0,0,20,0" HorizontalOptions="FillAndExpand">
+                
+                <Entry x:Name="TxtPassword"  WidthRequest="250" Placeholder="Password" IsPassword="True" FontSize="Large" TextColor="White" PlaceholderColor="White"/>
+
+                <StackLayout>
+                    <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
+
+                    <Label Text="See Pass" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
+
+                </StackLayout>
+
+
+            </StackLayout>
+
+            
+            
+            
+            <Button x:Name="BtnLogin" VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" FontSize="Medium" CornerRadius="30" TextColor="White"
+                    BackgroundColor="LimeGreen" BorderColor="White" BorderWidth="0.8"/>
+
+
+            <Button x:Name="BtnRegister" VerticalOptions="Center" Text="Register" FontSize="Medium" CornerRadius="30" BackgroundColor="LightPink" 
+                    BorderColor="White" BorderWidth="0.8" Clicked="CmdUserRegister"/>
+
+
+
+
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>
