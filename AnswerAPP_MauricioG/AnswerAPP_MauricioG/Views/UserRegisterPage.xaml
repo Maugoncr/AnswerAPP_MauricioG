@@ -44,10 +44,12 @@
 
                 <StackLayout Orientation="Horizontal" Padding="0,10,0,0" Spacing="20" HorizontalOptions="End">
                 
-                <Button Text="Add" BackgroundColor="#16F516" 
-                    WidthRequest="175" Padding="10,0,10,0" FontAttributes="Bold" FontSize="Medium"/>
-                    <Button Text="Cancel" BackgroundColor="#EB1F62" 
-                     WidthRequest="175" Padding="10,0,10,0"
+                <Button x:Name="BtnAdd" Text="Add" BackgroundColor="#16F516" 
+                    WidthRequest="175" Padding="10,0,10,0" FontAttributes="Bold" FontSize="Medium" Clicked="BtnAdd_Clicked"/>
+                    
+                    
+                <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="#EB1F62" 
+                    WidthRequest="175" Padding="10,0,10,0"
                         Clicked="CmdVolver" FontAttributes="Bold" FontSize="Medium"/>
 
                 </StackLayout>
