@@ -38,7 +38,21 @@
             <Entry x:Name="TxtBackUpEmail" HorizontalTextAlignment="Start" Placeholder="BackUpEmail" PlaceholderColor="White" TextTransform="Lowercase" FontSize="Large" TextColor="White" Keyboard="Email"/>
             <Entry x:Name="TxtJobDescription" HorizontalTextAlignment="Start" Placeholder="JobDescription" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
 
-            
+            <Picker x:Name="CboUserRole" Title="Select a User Role" TitleColor="White"
+                    ItemDisplayBinding="{Binding UserRole1}" TextColor="White" FontSize="22">
+
+                <!--El coso este espera un List--> 
+                <!--<Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+
+                        <x:String>registered...</x:String>
+                        <x:String>unregistered...</x:String>
+
+                    </x:Array>
+
+                </Picker.ItemsSource>-->
+                
+            </Picker>
 
             <FlexLayout>
 

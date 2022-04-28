@@ -10,8 +10,8 @@ namespace AnswerAPP_MauricioG
         // en esta clase estatica vamos a almacenar la info de configuracion de consumo del API
         // En pruebas normalmente se usa una ruta distinta que en Produccion.
 
-        public static string ProductiorRoute = "http://192.168.0.11:45455/api/";
-        public static string TestingRoute = "http://192.168.0.11:45455/api/";
+        public static string ProductiorRoute = "http://192.168.0.17:45455/api/";
+        public static string TestingRoute = "http://192.168.0.17:45455/api/";
 
         //TODO: Agregar la funcionalidad para JWT
 

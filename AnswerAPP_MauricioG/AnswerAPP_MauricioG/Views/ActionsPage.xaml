@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerAPP_MauricioG.Views.ActionsPage">
+    <ContentPage.Content>
+
+        <ScrollView>
+            
+            <!--Existen varias formas de llegar a una solucion, en este caso usaremos un grid
+            con botones para ofrecer al usuario las distintas funcionalidades del app
+            También es perfectamente válido usar por ejemplo un + en la esquina inferior derecha
+            (siguiendo un formato similar al de google)-->
+
+            <Grid>
+
+                <Label Text="Select an Action!" 
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="40"/>
+
+                <FlexLayout Wrap="Wrap"
+                            JustifyContent="SpaceEvenly"
+                            Direction="Row"
+                            Padding="20,20,20,0"
+                            AlignContent="Start"
+                            BackgroundColor="Azure"
+                            Margin="0,50,0,20"
+                            >
+
+                    <Button x:Name="BtnViewMyQuestions" Text="My Questions" BackgroundColor="#1728F8"
+                            TextColor="White"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            CornerRadius="20"
+                            Margin="0,0,0,20"
+                            Clicked="BtnViewMyQuestions_Clicked"
+                            />
+
+                    <Button x:Name="BtnAddQuestion" Text="Add a Question" BackgroundColor="#1728F8"
+                            TextColor="White"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            CornerRadius="20"
+                            Margin="0,0,0,20"
+                            />
+
+                    <Button x:Name="BtnViewMyAnswers" Text="My Answers" BackgroundColor="#1728F8"
+                            TextColor="White"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            CornerRadius="20"
+                            Margin="0,0,0,20"
+                            />
+
+                    <Button x:Name="BtnUserConfig" Text="Settings" BackgroundColor="#1728F8"
+                            TextColor="White"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            CornerRadius="20"
+                            Margin="0,0,0,20"
+                            />
+
+
+
+
+
+
+                </FlexLayout>
+
+
+            </Grid>
+            
+            
+            
+            
+        </ScrollView>
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

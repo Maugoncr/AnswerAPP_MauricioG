@@ -23,7 +23,17 @@ namespace AnswerAPP_MauricioG.Views
             //Estamos anclando la vista con el viewmodel respectivo
             BindingContext = viewModel = new UserViewModel();
 
+            LoadRoles();
+
         }
+
+
+        private async void LoadRoles() {
+
+                CboUserRole.ItemsSource = await viewModel.GetQList();
+
+        }
+
 
         private void CmdSeePassword(object sender, ToggledEventArgs e)
         {

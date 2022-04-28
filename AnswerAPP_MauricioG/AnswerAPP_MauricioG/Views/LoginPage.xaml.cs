@@ -9,13 +9,16 @@ using Xamarin.Forms.Xaml;
 
 namespace AnswerAPP_MauricioG.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+   // [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        UserViewModel Vm;
+
+
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            this.BindingContext = Vm = new UserViewModel();
         }
 
         private void CmdSeePassword(object sender, ToggledEventArgs e)
@@ -40,5 +43,31 @@ namespace AnswerAPP_MauricioG.Views
             await Navigation.PushAsync(new UserRegisterPage());
 
         }
+
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+
+            bool R = await Vm.ValidateUserAccess(TxtUserName.Text.Trim(), TxtPassword.Text.Trim());
+
+            if (R) {
+
+                //TODO quitar este mensaje porque es un bostezo
+                await DisplayAlert(":)", "Correct User", "OK");
+
+                await Navigation.PushAsync(new ActionsPage());
+
+            }
+            else
+            {
+                await DisplayAlert(":(", "Incorrect User or Password!", "OK");
+                TxtPassword.Focus();
+               
+            }
+        }
+
+
+
+
+
     }
 } 

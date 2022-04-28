@@ -23,7 +23,7 @@
                 <StackLayout>
                     <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
 
-                    <Label Text="See Pass" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
+                    <Label Text="Show Pass" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
 
                 </StackLayout>
 
@@ -33,8 +33,8 @@
             
             
             
-            <Button x:Name="BtnLogin" VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" FontSize="Medium" CornerRadius="30" TextColor="White"
-                    BackgroundColor="LimeGreen" BorderColor="White" BorderWidth="0.8"/>
+            <Button x:Name="BtnLogin" VerticalOptions="Center" Text="Login" FontSize="Medium" CornerRadius="30" TextColor="White"
+                    BackgroundColor="LimeGreen" BorderColor="White" BorderWidth="0.8" Clicked="BtnLogin_Clicked"/>
 
 
             <Button x:Name="BtnRegister" VerticalOptions="Center" Text="Register" FontSize="Medium" CornerRadius="30" BackgroundColor="LightPink" 
