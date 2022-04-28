@@ -26,6 +26,7 @@ namespace AnswerAPP_MauricioG.Models
             ChatReceivers = new HashSet<Chat>();
             ChatSenders = new HashSet<Chat>();
             Likes = new HashSet<Like>();
+
             UserRole = new UserRole();
 
         }

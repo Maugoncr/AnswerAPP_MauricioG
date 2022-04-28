@@ -40,7 +40,8 @@ namespace AnswerAPP_MauricioG.Views
         private async void CmdUserRegister(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new UserRegisterPage());
+            await Navigation.PushAsync(new UserRegisterPageV2());
+            //UserRegisterPage la antigua V2 con commandas
 
         }
 

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerAPP_MauricioG.Views.UserRegisterPageV2"
+              BackgroundImageSource="registerbg.jpg"
+             xmlns:viewmodels="clr-namespace:AnswerAPP_MauricioG.ViewModels" 
+             x:DataType="viewmodels:UserViewModelV2">
+   
+    <ContentPage.Content>
+
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+
+            <FlexLayout Padding="105,-30,105,-20">
+
+                <Image Source="usericon.png" VerticalOptions="Center" IsVisible="true" HeightRequest="170" WidthRequest="170"/>
+
+            </FlexLayout>
+            <Entry x:Name="TxtUserName" HorizontalTextAlignment="Start" Placeholder="Email/UserName" TextTransform="Lowercase" PlaceholderColor="White" FontSize="Large" TextColor="White" Keyboard="Email" 
+                   Text="{Binding NombreDeUsuario}"/>
+            <Entry x:Name="TxtFirstName" HorizontalTextAlignment="Start" Placeholder="FirstName"  FontSize="Large" PlaceholderColor="White" TextColor="White"
+                   Text="{Binding Nombre}"/>
+            <Entry x:Name="TxtLastName" HorizontalTextAlignment="Start" Placeholder="LastName" PlaceholderColor="White" FontSize="Large" TextColor="White"
+                   Text="{Binding Apellido}"/>
+            <Entry x:Name="TxtPhoneNumber" HorizontalTextAlignment="Start" Placeholder="Phone" Keyboard="Telephone"  PlaceholderColor="White" FontSize="Large" TextColor="White"
+                   Text="{Binding NumeroTelefono}"/>
+
+            <FlexLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="20">
+
+                    <Entry x:Name="TxtPassword" WidthRequest="310" HorizontalTextAlignment="Start" Placeholder="Password" PlaceholderColor="White" IsPassword="True" FontSize="Large" TextColor="White"
+                           Text="{Binding ContraseniaUsuario}"/>
+                    <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword" />
+                  
+
+                </StackLayout>
+
+
+            </FlexLayout>
+
+            <Entry x:Name="TxtBackUpEmail" HorizontalTextAlignment="Start" Placeholder="BackUpEmail" PlaceholderColor="White" TextTransform="Lowercase" FontSize="Large" TextColor="White" Keyboard="Email"
+                   Text="{Binding CorreoRespaldo}"/>
+            <Entry x:Name="TxtJobDescription" HorizontalTextAlignment="Start" Placeholder="JobDescription" PlaceholderColor="White" FontSize="Large" TextColor="White"
+                   Text="{Binding DescripcionTrabajo}"/>
+
+            <!--<Picker x:Name="CboUserRole" Title="Select a User Role" TitleColor="White"
+                    ItemDisplayBinding="{Binding UserRole1}" TextColor="White" FontSize="22"/>-->
+
+            <FlexLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="0,10,0,0" Spacing="20" HorizontalOptions="End">
+
+                    <Button x:Name="BtnAdd" Text="Add" BackgroundColor="#16F516" 
+                    WidthRequest="175" Padding="10,0,10,0" FontAttributes="Bold" FontSize="Medium" Command="{Binding AgregarUsuarioCommand}"/>
+
+
+                    <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="#EB1F62" 
+                    WidthRequest="175" Padding="10,0,10,0"
+                         FontAttributes="Bold" FontSize="Medium" Clicked="CmdVolver"/>
+                   
+
+                </StackLayout>
+
+            </FlexLayout>
+
+
+
+        </StackLayout>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>
